@@ -14,8 +14,8 @@ public class DockerService {
         this.dockerClient = client;
     }
 
-    public List<Container> listContainers(boolean all){
-        return dockerClient.listContainersCmd().withShowAll(all).exec();
+    public List<Container> listContainers(boolean showAll){
+        return dockerClient.listContainersCmd().withShowAll(showAll).exec();
     }
 
     public List<Image> listImages(){
